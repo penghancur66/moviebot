@@ -28,8 +28,8 @@ def get_movie_detail():
             sql = "INSERT INTO inbox (tanggal, pesan) VALUES (%s, %s)"
             cursor.execute(sql, (date.today().strftime("%Y-%m-%d"), message))
             lastid = cursor.lastrowid
-            sql = "INSERT INTO outbox (id_inbox, tanggal, title, released, actors, plot, runtime, genre) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
-            cursor.execute(sql, (lastid, date.today().strftime("%Y-%m-%d"), movie_det['Title'], movie_det['Released'], movie_det['Actors'], movie_det['Plot'], movie_det['Runtime'], movie_det['Genre']))
+            sql = "INSERT INTO outbox (id_inbox, tanggal, title, released, actors, plot, runtime, genre, poster) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            cursor.execute(sql, (lastid, date.today().strftime("%Y-%m-%d"), movie_det['Title'], movie_det['Released'], movie_det['Actors'], movie_det['Plot'], movie_det['Runtime'], movie_det['Genre'], movie_det['Poster']))
             lastidout = cursor.lastrowid
         connection.commit()
     except Exception as error:
