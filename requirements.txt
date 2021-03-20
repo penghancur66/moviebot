@@ -14,7 +14,7 @@ grpcio==1.24.0
 gunicorn==19.9.0
 idna==2.6
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 ndg-httpsclient==0.5.1
 protobuf==3.9.2
